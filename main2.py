@@ -1,13 +1,9 @@
-n = int(input())
-if n > 0:
-    for i in range(1, n+1):
-        if 5 <= i <= 9:
-            continue
-        elif 17 <= i <= 37:
-            continue
-        elif 78 <= i <= 87:
-            continue
-        else:
-            print(i)
-else:
-    print("Введите натуральное число!")
+a = []
+n = int(input("Введите количество элементов: "))
+s = input().split()
+for i in range(len(s)):
+    s[i] = int(s[i])
+for i in s[::2]:
+    if i % 2 == 0:
+        print(i, end=" ")
+
